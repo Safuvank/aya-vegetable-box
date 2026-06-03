@@ -24,8 +24,8 @@ export default function Hero() {
       {/* Red Gradient Accent */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10" />
 
-      {/* Content Container */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      {/* Content Container - Added pt-28 (padding top) for mobile, resets on md screens */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center pt-28 md:pt-0">
         
         {/* Brand Badge */}
         <div className="mb-6 inline-flex items-center px-3 py-1 rounded-full border border-red-600/30 bg-red-950/30 text-red-400 text-sm font-semibold tracking-wide backdrop-blur-sm">
