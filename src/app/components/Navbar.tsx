@@ -81,7 +81,7 @@ export default function Navbar() {
         - rounded-2xl (Curved corners for the floating look)
       */}
 
-      <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-50 bg-white/20 backdrop-blur-lg border border-white shadow-[0_5px_30px_rgba(0,0,0,0.15)] text-black rounded-2xl">
+      <header className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-7xl z-50 bg-white/30 backdrop-blur-lg border border-white shadow-[0_5px_30px_rgba(0,0,0,0.15)] text-black rounded-2xl">
         <div className="flex items-center justify-between py-4 px-6 md:px-8">
           {/* Logo */}
           <div className="flex items-center justify-between py-1">
@@ -170,11 +170,11 @@ export default function Navbar() {
 
           {/* Right Side (Language & Contact) */}
           <div className="hidden md:flex items-center gap-6">
-            <button className="flex items-center gap-1 text-sm font-medium hover:text-[#6748FE] transition-colors">
+            {/* <button className="flex items-center gap-1 text-sm font-medium hover:text-[#6748FE] transition-colors">
               <Globe className="w-4 h-4" />
               <span>En</span>
               <ChevronDown className="w-4 h-4" />
-            </button>
+            </button> */}
 
             <Link
               href="/contact"

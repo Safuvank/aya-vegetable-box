@@ -33,9 +33,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#050505] text-white relative overflow-hidden pt-24 md:pt-32 min-h-[600px] flex flex-col justify-between">
+    <footer className="bg-[#050505] text-white relative overflow-hidden pt-24 md:pt-32 min-h-150 flex flex-col justify-between">
       {/* Subtle Ambient Glow */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#6748FE] opacity-[0.03] blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 right-0 w-150 h-150 bg-[#6748FE] opacity-[0.03] blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container-custom mx-auto px-6 md:px-12 relative z-10 w-full max-w-7xl">
         {/* Middle Section: Contact & Link Grid */}
@@ -85,7 +85,7 @@ export default function Footer() {
                         href={link.href}
                         className="text-zinc-400 hover:text-white transition-colors text-[15px] group relative flex items-center w-fit"
                       >
-                        <span className="absolute left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-3" />
+                        <span className="absolute left-0 w-0 h-1px bg-white transition-all duration-300 group-hover:w-3" />
                         <span className="transition-transform duration-300 group-hover:translate-x-5">
                           {link.name}
                         </span>
