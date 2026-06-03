@@ -118,9 +118,9 @@ export default function ColorVisualizer() {
                 <h2 className="text-4xl sm:text-5xl font-black text-black mb-6">
                   {activeColor.name}
                 </h2>
-                <p className="text-lg text-neutral-500 leading-relaxed max-w-lg mb-10">
+                {/* <p className="text-lg text-neutral-500 leading-relaxed max-w-lg mb-10">
                   {activeColor.description}
-                </p>
+                </p> */}
               </motion.div>
             </AnimatePresence>
 
