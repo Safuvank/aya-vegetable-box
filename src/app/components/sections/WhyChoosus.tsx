@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
               <div className="absolute inset-0 bg-[radial-gradient(#e5e5e5_1px,transparent_1px)] [background-size:16px_16px] opacity-70 z-0" />
               
               <img 
-                src="/images/industrial-factory.jpg" 
+                src="/images/products/vegitables.jpeg" 
                 alt="Factory Production" 
                 className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-1000 group-hover:scale-110"
               />
