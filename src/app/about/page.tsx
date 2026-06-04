@@ -4,169 +4,194 @@ import { siteConfig } from "../constants/site.";
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col min-h-screen bg-white pt-24 md:pt-32">
+    <main className="flex flex-col min-h-screen bg-white">
       
-      {/* 1. PAGE HERO SECTION (Dark Editorial) */}
-      <section className="relative w-full bg-black py-20 md:py-32 overflow-hidden border-b-8 border-red-600">
-        <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-10">
-          <div className="max-w-3xl">
-            <h1 className="text-sm font-bold text-red-500 tracking-[0.2em] uppercase mb-4">
-              About {siteConfig.brandName} {/* */}
-            </h1>
-            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none mb-6">
-              Engineering the <br className="hidden md:block"/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                Backbone of Agriculture.
-              </span>
-            </h2>
-            <p className="text-lg md:text-xl text-neutral-400 font-light max-w-xl">
-              We manufacture and distribute heavy-duty, industrial-grade vegetable crates designed to survive the toughest harvest environments.
+      {/* 1. EDITORIAL HERO - Ultra Minimalist & High Impact */}
+      <section className="relative w-full pt-40 pb-24 md:pt-52 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center min-h-[70vh]">
+        <div className="flex items-center gap-4 mb-8">
+          <span className="w-12 h-1 bg-red-600"></span>
+          <h1 className="text-sm font-bold text-red-600 tracking-[0.2em] uppercase">
+            About {siteConfig.brandName} {/*[cite: 2] */}
+          </h1>
+        </div>
+        
+        <h2 className="text-5xl sm:text-6xl md:text-8xl font-black text-black tracking-tighter leading-[0.9] text-balance mb-10">
+          The heavy-duty <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-900">
+            backbone
+          </span> of <br />
+          agriculture.
+        </h2>
+        
+        <p className="text-lg md:text-2xl text-neutral-500 font-light max-w-2xl leading-relaxed">
+          We engineer and distribute industrial-grade crates built to survive the harshest harvest environments. No cracking. No bending. Just pure reliability.
+        </p>
+      </section>
+
+      {/* 2. THE STANDARD (Dark Mode Sticky Scroll) */}
+      <section className="relative bg-black text-white py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+            
+            {/* Sticky Left Column */}
+            <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
+              <h3 className="text-4xl md:text-5xl font-black tracking-tight mb-6">Zero <br/> Compromise.</h3>
+              <p className="text-neutral-400 text-lg leading-relaxed mb-8">
+                Every crate we mold is a commitment to the farmers and distributors who feed the nation. We eliminate agricultural waste caused by poor logistics.
+              </p>
+            </div>
+
+            {/* Scrolling Right Column */}
+            <div className="lg:w-2/3 flex flex-col gap-12">
+              {[
+                { title: "Premium PP Plastics", desc: "Manufactured using 100% virgin and high-grade recycled polypropylene for maximum lifespan." },
+                { title: "Extreme Weather UV", desc: "Treated to resist degradation from intense sunlight, preventing brittleness over seasons of use." },
+                { title: "Load-Bearing Architecture", desc: "Reinforced bases and walls designed specifically for dense, high-yield bulk transport." },
+                { title: "Precision Stacking", desc: "Interlocking edges engineered for safe, space-saving vertical storage in trucks and warehouses." }
+              ].map((item, i) => (
+                <div key={i} className="group border-b border-neutral-800 pb-12">
+                  <div className="flex items-baseline gap-6 mb-4">
+                    <span className="text-3xl font-black text-red-600">0{i + 1}</span>
+                    <h4 className="text-2xl md:text-3xl font-bold text-white group-hover:text-red-500 transition-colors">
+                      {item.title}
+                    </h4>
+                  </div>
+                  <p className="text-neutral-400 text-lg pl-14">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. LOGISTICS & INFRASTRUCTURE (Dashboard Style) */}
+      <section className="py-24 md:py-32 bg-neutral-50 border-y border-neutral-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div>
+              <h2 className="text-sm font-bold text-red-600 tracking-[0.2em] uppercase mb-4">Scale</h2>
+              <h3 className="text-4xl md:text-6xl font-black text-black tracking-tight">Infrastructure</h3>
+            </div>
+            <p className="text-neutral-500 max-w-md text-lg">
+              Operating across major strategic checkpoints to ensure rapid deployment of wholesale orders.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* 2. OUR MISSION & VISION (Grid Layout) */}
-      <section className="py-24 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start">
-            <div>
-              <h3 className="text-3xl font-black text-black mb-6">Our Mission</h3>
-              <p className="text-neutral-600 leading-relaxed text-lg mb-8">
-                At AYA, our mission is simple: to eliminate agricultural waste caused by poor logistics. We build crates that do not break, do not bend, and protect the harvest from farm to market. Every box we mold is a commitment to the farmers and distributors who feed the nation.
-              </p>
-            </div>
-            <div className="bg-neutral-50 p-10 rounded-3xl border border-neutral-200 shadow-sm relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-full blur-3xl group-hover:bg-red-200 transition-colors duration-500" />
-              <h3 className="text-3xl font-black text-black mb-6 relative z-10">The Standard</h3>
-              <ul className="space-y-4 relative z-10">
-                {[
-                  "100% Premium Virgin & Recycled PP Plastics",
-                  "UV Resistant for Extreme Weather",
-                  "Precision Stackable Architecture",
-                  "Maximum Load-Bearing Capacity"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-red-600 rounded-full" />
-                    <span className="text-neutral-700 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. BUSINESS STATISTICS (Bento Box Design) */}
-      <section className="py-24 bg-neutral-950 text-white relative overflow-hidden">
-        <div className="absolute -left-40 top-20 w-96 h-96 bg-red-900/20 blur-[100px] rounded-full" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight">Scale & Infrastructure</h2>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {[
-              { label: "Orders Delivered", value: "5,000+" },
-              { label: "Major Locations", value: "5+" },
-              { label: "Color Variants", value: "10+" },
-              { label: "B2B Partners", value: "100+" },
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-8 bg-neutral-900 border border-neutral-800 rounded-2xl hover:border-red-600 transition-colors">
-                <span className="text-4xl md:text-6xl font-black text-white mb-2">{stat.value}</span>
-                <span className="text-sm font-bold text-neutral-500 uppercase tracking-widest text-center">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SALES AREA & LOCATIONS */}
-      <section className="py-24 bg-white border-b border-neutral-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="w-full lg:w-1/2">
-              <h2 className="text-sm font-bold text-red-600 tracking-[0.2em] uppercase mb-4">
-                Our Reach
-              </h2>
-              <h3 className="text-4xl md:text-5xl font-black text-black tracking-tight leading-tight mb-6">
-                Supplying the largest agricultural hubs.
-              </h3>
-              <p className="text-neutral-600 text-lg leading-relaxed mb-8">
-                AYA operates across major strategic checkpoints to ensure rapid deployment of wholesale crate orders to farms and distribution centers.
-              </p>
-              
-              {/* Location Tags based on the AYA Catalog */}
-              <div className="flex flex-wrap gap-3">
-                {siteConfig.locations.map((loc) => (
-                  <span key={loc} className="px-5 py-2 bg-white border-2 border-neutral-200 text-black font-bold rounded-full text-sm hover:border-red-600 transition-colors">
-                    {loc}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            {/* Massive Stats Block */}
+            <div className="lg:col-span-7 grid grid-cols-2 gap-4">
+              {[
+                { label: "Orders Delivered", value: "5,000+" },
+                { label: "B2B Partners", value: "100+" },
+                { label: "Color Variants", value: "6+" },
+                { label: "Major Hubs", value: "5" },
+              ].map((stat, i) => (
+                <div key={i} className="bg-white p-8 border border-neutral-200 flex flex-col justify-center hover:border-black transition-colors group">
+                  <span className="text-4xl md:text-6xl font-black text-black tracking-tighter mb-2 group-hover:text-red-600 transition-colors">
+                    {stat.value}
                   </span>
-                ))}
+                  <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">
+                    {stat.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Locations Flight-Board Style */}
+            <div className="lg:col-span-5 bg-black p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-red-900/30 blur-[80px] rounded-full pointer-events-none" />
+              <div className="relative z-10">
+                <h4 className="text-sm font-bold text-red-500 uppercase tracking-widest mb-8 border-b border-neutral-800 pb-4">
+                  Active Distribution Routes
+                </h4>
+                <ul className="space-y-6">
+                  {siteConfig.locations.map((loc) => (
+                    <li key={loc} className="flex items-center justify-between group">
+                      <span className="text-2xl font-bold text-neutral-300 group-hover:text-white transition-colors">
+                        {loc} {/*[cite: 2] */}
+                      </span>
+                      <span className="w-2 h-2 bg-red-600 rounded-full shadow-[0_0_10px_rgba(220,38,38,0.8)]" />
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
-            {/* Abstract Map Graphic */}
-            <div className="w-full lg:w-1/2 bg-neutral-100 rounded-3xl p-8 aspect-video flex items-center justify-center border border-neutral-200 relative overflow-hidden">
-               <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
-               <div className="text-center relative z-10">
-                 <p className="text-2xl font-black text-neutral-300 uppercase tracking-widest mb-2">Network Active</p>
-                 <p className="text-sm text-neutral-400 font-medium">South & North Indian Distribution</p>
-               </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* 5. PRODUCT LINEUP SUMMARY */}
-      <section className="py-24 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* 4. THE ARSENAL (Hover Interaction List) */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-sm font-bold text-red-600 tracking-[0.2em] uppercase mb-4">
             The Arsenal
           </h2>
-          <h3 className="text-4xl md:text-5xl font-black text-black tracking-tight mb-16">
-            A crate for every requirement.
+          <h3 className="text-4xl md:text-5xl font-black text-black tracking-tight mb-12">
+            Engineered in every color.
           </h3>
           
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-col gap-4 mb-16">
             {[
-              { name: "Red Series", color: "bg-red-600" },
-              { name: "Blue Series", color: "bg-blue-600" },
-              { name: "Green Series", color: "bg-green-600" },
-              { name: "Orange High-Vis", color: "bg-orange-500" },
-              { name: "Yellow Premium", color: "bg-yellow-400" },
-              { name: "PP Black Industrial", color: "bg-neutral-900" }
+              { name: "Red 1st Series", type: "Heavy Duty", color: "bg-red-600" },
+              { name: "Blue 1st Series", type: "Standard", color: "bg-blue-600" },
+              { name: "Green 2nd Series", type: "Eco Grade", color: "bg-green-600" },
+              { name: "Orange Series", type: "High-Vis", color: "bg-orange-500" },
+              { name: "Yellow Series", type: "Premium", color: "bg-yellow-400" },
+              { name: "PP Black", type: "Industrial", color: "bg-neutral-900" }
             ].map((prod, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white px-6 py-4 rounded-xl shadow-sm border border-neutral-200 hover:-translate-y-1 transition-transform">
-                <span className={`w-4 h-4 rounded-full ${prod.color}`} />
-                <span className="font-bold text-neutral-800">{prod.name}</span>
+              <div key={i} className="group flex flex-col sm:flex-row sm:items-center justify-between p-6 bg-neutral-50 hover:bg-black transition-all duration-300 border border-neutral-100 hover:border-black cursor-pointer">
+                <div className="flex items-center gap-6 mb-4 sm:mb-0">
+                  <span className={`w-6 h-6 rounded-sm shadow-inner ${prod.color}`} />
+                  <span className="text-2xl font-bold text-black group-hover:text-white transition-colors">
+                    {prod.name} {/*[cite: 2] */}
+                  </span>
+                </div>
+                <span className="text-sm font-bold text-neutral-400 uppercase tracking-widest group-hover:text-red-500 transition-colors">
+                  {prod.type}
+                </span>
               </div>
             ))}
           </div>
           
-          <div className="mt-12">
-            <Link href="/products" className="inline-block text-red-600 font-bold hover:text-black transition-colors uppercase tracking-widest border-b-2 border-red-600 hover:border-black pb-1">
-              View Full Product Catalog
-            </Link>
-          </div>
+          <Link 
+            href="/products" 
+            className="group inline-flex items-center gap-3 text-black font-black uppercase tracking-widest text-lg"
+          >
+            <span className="border-b-2 border-black group-hover:border-red-600 transition-colors">
+              Explore Full Catalog
+            </span>
+            <svg className="w-5 h-5 text-red-600 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={3} d="M5 12h14m-7-7l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
 
-      {/* 6. CALL TO ACTION */}
-      <section className="py-32 bg-red-600 text-white text-center px-4">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6">
-          Ready to scale your logistics?
-        </h2>
-        <p className="text-red-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-          Contact our sales team today to discuss bulk pricing, custom orders, and immediate availability in your region.
-        </p>
-        <Link 
-          href="/contact" 
-          className="inline-block bg-white text-black font-black text-lg px-10 py-5 rounded-full hover:bg-neutral-100 hover:scale-105 transition-all shadow-[0_10px_40px_rgba(0,0,0,0.3)]"
-        >
-          Contact Us Now
-        </Link>
+      {/* 5. MASSIVE CALL TO ACTION */}
+      <section className="bg-red-600 py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center text-center">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+        
+        <div className="relative z-10 max-w-4xl">
+          <h2 className="text-5xl sm:text-7xl font-black text-white tracking-tighter mb-8 leading-none">
+            Ready to scale <br/> your logistics?
+          </h2>
+          <p className="text-red-100 text-xl md:text-2xl font-medium mb-12">
+            Contact our sales team today to discuss bulk pricing, custom orders, and immediate availability.
+          </p>
+          
+          <Link 
+            href="/contact" 
+            className="inline-block bg-white text-black font-black uppercase tracking-widest text-lg px-12 py-6 hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+          >
+            Start an Order
+          </Link>
+        </div>
       </section>
 
     </main>
