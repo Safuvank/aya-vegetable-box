@@ -174,7 +174,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. MASSIVE CALL TO ACTION */}
-      <section className="bg-red-600 py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center text-center">
+      {/* <section className="bg-red-600 py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center text-center">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
         
         <div className="relative z-10 max-w-4xl">
@@ -192,7 +192,7 @@ export default function AboutPage() {
             Start an Order
           </Link>
         </div>
-      </section>
+      </section> */}
 
     </main>
   );

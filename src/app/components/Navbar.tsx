@@ -62,7 +62,7 @@ export default function Navbar() {
               href="/" 
               className="text-2xl md:text-3xl font-black tracking-tighter text-black uppercase"
             >
-              AYA<span className="text-red-600">.</span>
+              AYA Vegitable Box<span className="text-red-600">.</span>
             </Link>
           </div>
 

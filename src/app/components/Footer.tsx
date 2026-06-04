@@ -6,19 +6,9 @@ export default function Footer() {
     {
       title: "Navigation",
       links: [
-        { name: "About Us", href: "#" },
-        { name: "Our Work", href: "#" },
-        { name: "Industries", href: "#" },
-        { name: "Careers", href: "#" },
-      ],
-    },
-    {
-      title: "Services",
-      links: [
-        { name: "Business Branding", href: "#" },
-        { name: "Personal Branding", href: "#" },
-        { name: "Startup Branding", href: "#" },
-        { name: "Entertainment Branding", href: "#" },
+        { name: "About Us", href: "/about" },
+        { name: "Contact Us", href: "/contact" },
+        { name: "products", href: "/products" },
       ],
     },
     {
@@ -27,7 +17,7 @@ export default function Footer() {
         { name: "Instagram", href: "#" },
         { name: "X", href: "#" },
         { name: "LinkedIn", href: "#" },
-        { name: "Insights Blog", href: "#" },
+        { name: "Whatsapp", href: "#" },
       ],
     },
   ];
@@ -47,7 +37,7 @@ export default function Footer() {
                 Headquarters
               </p>
               <p>
-                Kottakkal, Kerala,
+                Kozhikkode, Kerala,
                 <br />
                 India
               </p>
@@ -57,16 +47,16 @@ export default function Footer() {
                 Contact
               </p>
               <a
-                href="mailto:info@seabrand.com"
+                href="mailto:info@ayavegitablebox.com"
                 className="hover:text-white transition-colors w-fit"
               >
-                info@seabrand.com
+                info@ayavegitablebox.com
               </a>
               <a
-                href="tel:+918081301190"
+                href="tel:+919446903829"
                 className="hover:text-white transition-colors w-fit"
               >
-                (+91) 808 130 1190
+                (+91) 944 690 3829
               </a>
             </div>
           </div>
@@ -101,7 +91,7 @@ export default function Footer() {
         {/* Bottom Section: Divider & Legal */}
         <div className="relative w-full pt-8 pb-16 md:pb-24 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 z-10">
           <p className="text-zinc-500 text-sm">
-            ©2026 - {new Date().getFullYear()} SeaBrand. All rights reserved.
+            ©2025 - {new Date().getFullYear()} Aya Vegitable Box. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-xs font-semibold tracking-widest uppercase text-zinc-500">

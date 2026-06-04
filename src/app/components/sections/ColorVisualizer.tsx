@@ -2,10 +2,20 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Button } from "../ui/Button";
 
 // The complete color palette based on the AYA Catalog
 const variants = [
+  {
+    id: "green",
+    name: "Green Crate",
+    category: "Eco Series",
+    colorClass: "bg-green-600",
+    ringClass: "ring-green-600",
+    image: "/images/products/green.png",
+    description: "Blending seamlessly with agricultural products. Reliable secondary grade crates offering excellent value without compromising structural integrity.",
+  },
   {
     id: "red",
     name: "Red Crate",
@@ -25,24 +35,23 @@ const variants = [
     description: "Versatile and highly recognizable. Perfect for organizing different harvest yields, distribution centers, and retail display.",
   },
   {
-    id: "green",
-    name: "Green Crate",
-    category: "Eco Series",
-    colorClass: "bg-green-600",
-    ringClass: "ring-green-600",
-    image: "/images/products/green.png",
-    description: "Blending seamlessly with agricultural products. Reliable secondary grade crates offering excellent value without compromising structural integrity.",
+    id: "yellow",
+    name: "Yellow Crate",
+    category: "High Visibility",
+    colorClass: "bg-yellow-400",
+    ringClass: "ring-yellow-400",
+    image: "/images/products/yellow.png",
+    description: "Maximum visibility for safety-conscious environments. Ideal for color-coding specific product types or designating hazard zones.",
   },
   {
-    id: "black",
+    id: "orange",
     name: "Orange Crate",
-    category: "High Visibility",
+    category: "Custom Sorting",
     colorClass: "bg-orange-500",
     ringClass: "ring-orange-500",
-    image: "/images/products/black.png",
+    image: "/images/products/orange.png",
     description: "Bright and impossible to miss. Ideal for custom sorting workflows and ensuring crates are easily tracked across massive warehouse floors.",
   },
-  
 ];
 
 export default function ColorVisualizer() {
@@ -152,9 +161,11 @@ export default function ColorVisualizer() {
               </div>
             </div>
 
-            <Button size="lg" variant="primary" className="w-full sm:w-auto px-10">
-              Request {activeColor.name} Quote
-            </Button>
+            <Link href="/products" className="w-full sm:w-auto">
+              <Button size="lg" variant="primary" className="w-full sm:w-auto px-10">
+                More Products
+              </Button>
+            </Link>
 
           </div>
         </div>

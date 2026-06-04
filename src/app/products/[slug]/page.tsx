@@ -181,7 +181,7 @@ Could you please provide more details or a quote?`;
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex justify-center py-4 px-8 bg-black text-white text-sm font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors"
+                className="flex-1 flex justify-center py-4 px-8 bg-green-600 text-white text-sm font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors"
               >
                 Chat on WhatsApp
               </a>
